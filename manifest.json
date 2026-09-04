@@ -1,40 +1,36 @@
 {
-    "display_information": {
-        "name": "SlackSchoolApprovalApp"
+  "display_information": {
+    "name": "SlackSchoolApprovalApp"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "SlackSchoolApprovalApp",
+      "always_online": false
     },
-    "features": {
-        "bot_user": {
-            "display_name": "SlackSchoolApprovalApp",
-            "always_online": false
-        },
-        "slash_commands": [
-            {
-                "command": "/approve-request",
-                "url": "https://YOUR-RAILWAY-URL/slack/events",
-                "description": "Starts an Approval",
-                "usage_hint": "Slack School Approval App",
-                "should_escape": false
-            }
-        ]
+    "slash_commands": [
+      {
+        "command": "/approve-request",
+        "url": "https://slackschoolapprovalapp-production.up.railway.app/slack/events",
+        "description": "Starts an Approval",
+        "usage_hint": "Slack School Approval App",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["chat:write", "im:write", "commands"]
     },
-    "oauth_config": {
-        "scopes": {
-            "bot": [
-                "chat:write",
-                "im:write",
-                "commands"
-            ]
-        },
-        "pkce_enabled": false
+    "pkce_enabled": false
+  },
+  "settings": {
+    "interactivity": {
+      "is_enabled": true,
+      "request_url": "https://slackschoolapprovalapp-production.up.railway.app/slack/events"
     },
-    "settings": {
-        "interactivity": {
-            "is_enabled": true,
-            "request_url": "https://YOUR-RAILWAY-URL/slack/events"
-        },
-        "org_deploy_enabled": false,
-        "socket_mode_enabled": false,
-        "token_rotation_enabled": false,
-        "is_mcp_enabled": false
-    }
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false,
+    "is_mcp_enabled": false
+  }
 }
